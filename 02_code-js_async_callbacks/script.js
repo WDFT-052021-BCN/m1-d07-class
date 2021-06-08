@@ -7,27 +7,24 @@ let toggleButton = document.getElementById("hide-div");
 dropdownSection.classList.add("open");
 
 const onClick = () => {
-  console.log("You clicked the button");
   setTimeout(() => {
-    let text;
-    if (toggleButton.innerText === "Hide") {
-      text = "Show";
+    if (this.innerText === "Hide") {
+      this.innerText = "Show";
     } else {
-      text = "Hide";
+      this.innerText = "Hide";
     }
-    toggleButton.innerText = text;
     dropdownSection.classList.toggle("close");
     console.log("Time is up");
-  }, 3000);
+  }, 500);
 };
 
 toggleButton.addEventListener("click", onClick);
 
-console.log("Some button has been clicked");
+/* console.log("Some button has been clicked");
 setTimeout(() => {
   // Doing a lot of crazy thing before time is up ....
   // Doing a lot of crazy thing before time is up ....
   // Doing a lot of crazy thing before time is up ....
   console.log("Time is up");
 }, 1000);
-console.log("Timer is running");
+console.log("Timer is running"); */
